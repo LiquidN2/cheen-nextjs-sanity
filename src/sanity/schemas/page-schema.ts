@@ -4,36 +4,29 @@ const page = {
   type: 'document',
   fields: [
     {
-      name: 'name',
-      title: 'Name',
+      name: 'title',
+      title: 'Title',
       type: 'string',
     },
     {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: { source: 'name' },
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
     },
     {
-      name: 'pageTitle',
-      title: 'Page Title',
+      name: 'description',
+      title: 'Description',
       type: 'string',
     },
     {
-      name: 'pageDescription',
-      title: 'Page Description',
-      type: 'string',
-    },
-    {
-      name: 'keyWords',
+      name: 'keywords',
       title: 'Key Words',
       type: 'array',
       of: [{ type: 'string' }],
-    },
-    {
-      name: 'pageUrl',
-      Title: 'Page URL',
-      type: 'url',
     },
   ],
 };
