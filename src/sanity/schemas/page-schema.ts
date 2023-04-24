@@ -15,19 +15,25 @@ const page = {
       options: { source: 'name' },
     },
     {
-      name: 'title',
-      title: 'Title',
+      name: 'pageTitle',
+      title: 'Page Title',
       type: 'string',
     },
     {
-      name: 'description',
-      title: 'Description',
+      name: 'pageDescription',
+      title: 'Page Description',
       type: 'string',
     },
     {
-      name: 'url',
-      Title: 'Url',
-      type: 'string',
+      name: 'keyWords',
+      title: 'Key Words',
+      type: 'array',
+      of: [{ type: 'string' }],
+    },
+    {
+      name: 'pageUrl',
+      Title: 'Page URL',
+      type: 'url',
     },
   ],
 };
